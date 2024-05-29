@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Nama dan Nomor</title>
+</head>
+<body>
+    <h1>Menampilkan Nama dan Nomor</h1>
+    <ul id="nama-dan-nomor"></ul>
+
+    <script>
+        var nama = "Nama Anda"; // Ganti dengan nama Anda
+        var i = 1;
+
+        // Menggunakan while loop
+        var ul = document.getElementById("nama-dan-nomor");
+        while (i <= 25) {
+            var li = document.createElement("li");
+            li.textContent = nama + " " + i;
+            ul.appendChild(li);
+            i++;
+        }
+
+        // Menggunakan do-while loop
+        var j = 1;
+        do {
+            var li = document.createElement("li");
+            li.textContent = nama + " " + j;
+            ul.appendChild(li);
+            j++;
+        } while (j <= 25);
+    </script>
+</body>
+</html>

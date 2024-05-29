@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logical Operator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<h2>Logical Operator</h2>
+<div id="output"></div>
+
+<script>
+    function logicalOperators(value1, value2) {
+        let output = document.getElementById('output');
+        output.innerHTML = '';
+
+        output.innerHTML += `Value 1: ${value1}<br>`;
+        output.innerHTML += `Value 2: ${value2}<br><br>`;
+
+        // AND operator
+        output.innerHTML += `AND: ${value1 && value2}<br>`;
+        // OR operator
+        output.innerHTML += `OR: ${value1 || value2}<br>`;
+        // NOT operator
+        output.innerHTML += `NOT Value 1: ${!value1}<br>`;
+        output.innerHTML += `NOT Value 2: ${!value2}<br>`;
+    }
+
+    logicalOperators(true, false); // Ganti nilai sesuai kebutuhan
+</script>
+</body>
+</html>

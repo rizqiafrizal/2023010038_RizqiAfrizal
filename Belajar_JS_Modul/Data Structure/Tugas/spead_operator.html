@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Teman dan Hobi</title>
+</head>
+<body>
+<h2>Data Teman dan Hobi</h2>
+
+<!-- Tampilkan data teman dan hobi -->
+ <ul id="data-list">
+</ul>
+<script>
+    // Array data nama teman dan hobi
+    const friends = ["Teman1", "Teman2", "Teman3"];
+    const hobbies = ["Hobi1", "Hobi2", "Hobi3"];
+
+    // Gabungkan dua array menggunakan spread operator
+    const combinedData = [...friends.map((friend, index) => `${friend} - ${hobbies[index]}`)];
+
+    // Function untuk menampilkan data teman dan hobi
+    function displayData() {
+        const dataList = document.getElementById("data-list");
+        dataList.innerHTML = ""; // Clear list
+        combinedData.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = item;
+            dataList.appendChild(listItem);
+        });
+    }
+
+    // Panggil function untuk menampilkan data saat halaman dimuat
+    displayData();
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Teman dan Hobi</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #container {
+        width: 400px;
+        margin: 20px auto;
+    }
+    #data-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    #data-list li {
+        margin-bottom: 10px;
+    }
+    #add-input, #remove-input {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<div id="container">
+    <h2>Data Teman dan Hobi</h2>
+    <ul id="data-list"></ul>
+    <input type="text" id="add-input" placeholder="Tambah teman...">
+    <button onclick="addFriend()">Tambah</button>
+    <input type="text" id="remove-input" placeholder="Hapus teman...">
+    <button onclick="removeFriend()">Hapus</button>
+
+    <script>
+        // Array data nama teman dan hobi
+        var friends = ["Gani", "Ahyar", "Dikri"];
+        var hobbies = ["Memancing Emosi", "Ngakitin", "Menyanyi"];
+
+        // Function untuk menampilkan data teman dan hobi
+        function displayData() {
+            var dataList = document.getElementById("data-list");
+            dataList.innerHTML = ""; // Clear list
+            for (var i = 0; i < friends.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = friends[i] + " - " + hobbies[i];
+                dataList.appendChild(listItem);
+            }
+        }
+
+        // Function untuk menambah teman
+        function addFriend() {
+            var input = document.getElementById("add-input").value;
+            if (input) {
+                friends.push(input);
+                hobbies.push("Hobi Baru"); // Hobi default untuk teman baru
+                displayData();
+                document.getElementById("add-input").value = ""; // Kosongkan input
+            }
+        }
+
+        // Function untuk menghapus teman
+        function removeFriend() {
+            var input = document.getElementById("remove-input").value;
+            var index = friends.indexOf(input);
+            if (index !== -1) {
+                friends.splice(index, 1);
+                hobbies.splice(index, 1); // Hapus hobi yang sesuai dengan teman yang dihapus
+                displayData();
+                document.getElementById("remove-input").value = ""; // Kosongkan input
+            } else {
+                alert("Teman tidak ditemukan.");
+            }
+        }
+
+        // Panggil function untuk menampilkan data saat halaman dimuat
+        displayData();
+    </script>
+</div>
+</body>
+</html>

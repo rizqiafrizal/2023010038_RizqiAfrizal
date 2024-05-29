@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Objek biodata
+const biodata = {
+    firstName: "Rizqi",
+    lastName: "Afrizal",
+    age: 18,
+    isMarried: false,
+    address: "Mayong City",
+    email: "rizkyafriza5656@gmail.com",
+    phoneNumber: "087816704889"
+};
+
+// Objek prodi
+const prodi = {
+    major: "Rekayasa Perangkat Lunak",
+    year: 2,
+    university: "POLIBANG",
+    location: "MAYONG JEPARA"
+};
+
+// Fungsi untuk menampilkan profil
+function displayProfile() {
+    document.body.innerHTML = "<h2>Profil Mahasiswa</h2>" +
+                              "<h3>Biodata:</h3>" +
+                              "<p>Nama: " + biodata.firstName + " " + biodata.lastName + "</p>" +
+                              "<p>Umur: " + biodata.age + "</p>" +
+                              "<p>Status Menikah: " + (biodata.isMarried ? "Sudah" : "Belum") + "</p>" +
+                              "<p>Alamat: " + biodata.address + "</p>" +
+                              "<p>Email: " + biodata.email + "</p>" +
+                              "<p>Nomor Telepon: " + biodata.phoneNumber + "</p>" +
+                              "<h3>Program Studi:</h3>" +
+                              "<p>Jurusan: " + prodi.major + "</p>" +
+                              "<p>Tahun: " + prodi.year + "</p>" +
+                              "<p>Universitas: " + prodi.university + "</p>" +
+                              "<p>Lokasi: " + prodi.location + "</p>";
+}
+
+// Panggil fungsi untuk menampilkan profil
+displayProfile();
+
+    </script>
+</body>
+</html>

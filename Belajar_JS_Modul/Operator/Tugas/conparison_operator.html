@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perbandingan Operator</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<h2>Comparison Operator</h2>
+<div id="output"></div>
+
+<script>
+    function compareNumbers(num1, num2) {
+        let output = document.getElementById('output');
+        output.innerHTML = '';
+
+        output.innerHTML += `${num1} > ${num2}: ${num1 > num2}<br>`;
+        output.innerHTML += `${num1} < ${num2}: ${num1 < num2}<br>`;
+        output.innerHTML += `${num1} >= ${num2}: ${num1 >= num2}<br>`;
+        output.innerHTML += `${num1} <= ${num2}: ${num1 <= num2}<br>`;
+        output.innerHTML += `${num1} === ${num2}: ${num1 === num2}<br>`;
+        output.innerHTML += `${num1} !== ${num2}: ${num1 !== num2}<br>`;
+    }
+
+    compareNumbers(5, 3); // Ganti angka sesuai kebutuhan
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Teman Sekelas</title>
+</head>
+<body>
+    <h1>Nama Teman Sekelas</h1>
+    <ul id="nama-teman"></ul>
+
+    <script>
+        // Daftar nama teman sekelas
+        var daftarTeman = [
+            "Tama",
+            "Truno",
+            "Trio",
+            "Treso",
+            // Tambahkan nama teman sekelas Anda di sini
+        ];
+
+        // Fungsi untuk menampilkan nama teman sekelas
+        function tampilkanNamaTeman() {
+            var namaTemanElement = document.getElementById("nama-teman");
+
+            // Kosongkan daftar nama teman sebelum menambahkan yang baru
+            namaTemanElement.innerHTML = "";
+
+            // Tambahkan setiap nama teman ke dalam daftar
+            daftarTeman.forEach(function(nama) {
+                var li = document.createElement("li");
+                li.textContent = nama;
+                namaTemanElement.appendChild(li);
+            });
+        }
+
+        // Panggil fungsi tampilkanNamaTeman() saat halaman dimuat
+        window.onload = tampilkanNamaTeman;
+    </script>
+</body>
+</html>
+

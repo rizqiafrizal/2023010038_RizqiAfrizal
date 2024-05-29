@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Nama Anda</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>Truno Lele</h1>
+    <div id="nama-container"></div>
+
+    <script>
+        // Fungsi untuk menampilkan nama sebanyak 50 kali dengan urutan dari nomor 50 ke nomor 1
+        function tampilkanNama() {
+            var nama = "Truno"; // Ganti dengan nama Anda
+            var container = document.getElementById("nama-container");
+            container.innerHTML = ""; // Bersihkan isi container sebelumnya
+
+            for (var i = 50; i > 0; i--) {
+                var namaElement = document.createElement("div");
+                namaElement.className = "nama";
+                namaElement.textContent = nama + " " + i;
+                container.appendChild(namaElement);
+            }
+        }
+
+        // Panggil fungsi tampilkanNama() saat halaman dimuat
+        window.onload = tampilkanNama;
+    </script>
+</body>
+</html>
+

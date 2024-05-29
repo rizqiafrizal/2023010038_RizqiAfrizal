@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tipe Data BigInt</h1>
+    <p id="bigintData"></p>
+    <script>
+        // Mendefinisikan tipe data BigInt
+        var bigIntNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
+
+        // Menampilkan tipe data BigInt
+        document.getElementById("bigintData").innerHTML = "Tipe data dari bigIntNumber: " + typeof bigIntNumber + "<br>";
+        document.getElementById("bigintData").innerHTML += "Nilai dari bigIntNumber: " + bigIntNumber;
+    </script>
+    </script>
+</body>
+</html>

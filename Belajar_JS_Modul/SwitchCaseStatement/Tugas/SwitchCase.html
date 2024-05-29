@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switch Case Example</title>
+</head>
+<body>
+  <div id="result"></div>
+
+  <script>
+    function showResult() {
+      var input = document.getElementById("input").value;
+      var resultDiv = document.getElementById("result");
+      var result;
+
+      switch(input) {
+        case "1":
+          result = "Option 1 selected";
+          break;
+        case "2":
+          result = "Option 2 selected";
+          break;
+        case "3":
+          result = "Option 3 selected";
+          break;
+        case "4":
+          result = "Option 4 selected";
+          break;
+        case "5":
+          result = "Option 5 selected";
+          break;
+        case "6":
+          result = "Option 6 selected";
+          break;
+        case "7":
+          result = "Option 7 selected";
+          break;
+        default:
+          result = "Invalid selection";
+      }
+
+      resultDiv.innerHTML = "<p>" + result + "</p>";
+    }
+  </script>
+
+  <label for="input">Choose an option:</label>
+  <select id="input" onchange="showResult()">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+    <option value="5">Option 5</option>
+    <option value="6">Option 6</option>
+    <option value="7">Option 7</option>
+  </select>
+</body>
+</html>

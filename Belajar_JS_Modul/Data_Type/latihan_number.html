@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    /p><h1>Tipe Data BigInt</h1>
+    <p id="bigintData"><
+
+    <script>
+        // Mendefinisikan tipe data BigInt
+        var bigIntNumber = BigInt(Number.MAX_SAFE_INTEGER) + BigInt(1);
+
+        // Menampilkan tipe data BigInt
+        document.getElementById("bigintData").innerHTML = "Tipe data dari bigIntNumber: " + typeof bigIntNumber + "<br>";
+        document.getElementById("bigintData").innerHTML += "Nilai dari bigIntNumber: " + bigIntNumber;
+    </script>
+
+    <script>
+        // Menggunakan seluruh operator pada tipe data numbers
+        var num1 = 10;
+        var num2 = 5;
+
+        var addition = num1 + num2;
+        var subtraction = num1 - num2;
+        var multiplication = num1 * num2;
+        var division = num1 / num2;
+        var remainder = num1 % num2;
+        var increment = ++num1;
+        var decrement = --num2;
+        var exponentiation = num1 ** num2;
+
+        // Menampilkan hasil
+        document.getElementById("result").innerHTML = 
+            "Penjumlahan: " + addition + "<br>" +
+            "Pengurangan: " + subtraction + "<br>" +
+            "Perkalian: " + multiplication + "<br>" +
+            "Pembagian: " + division + "<br>" +
+            "Sisa Pembagian: " + remainder + "<br>" +
+            "Increment: " + increment + "<br>" +
+            "Decrement: " + decrement + "<br>" +
+            "Pangkat: " + exponentiation;
+    </script> 
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menampilkan Nama</title>
+</head>
+<body>
+  <div id="nama-container"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var namaContainer = document.getElementById("nama-container");
+
+      // Loop untuk menampilkan nama sebanyak 50 kali dari nomor 50 ke nomor 1
+      for (var i = 50; i >= 1; i--) {
+        var namaElement = document.createElement("div");
+        namaElement.textContent = "Truno Pemburu Janda";
+        namaContainer.appendChild(namaElement);
+      }
+    });
+  </script>
+</body>
+</html>

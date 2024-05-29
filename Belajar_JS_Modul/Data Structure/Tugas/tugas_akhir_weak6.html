@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPTPhone - Toko Handphone</title>
+</head>
+<body>
+<h2> Toko Handphone</h2>
+
+<!-- List barang yang dijual -->
+<ul id="product-list">
+    <!-- Di sini akan diisi oleh JavaScript -->
+</ul>
+
+<!-- Form untuk memasukkan barang yang dibeli -->
+<label for="product-input">Masukkan nama barang:</label>
+<input type="text" id="product-input" placeholder="Nama barang...">
+<label for="price-input">Masukkan harga barang:</label>
+<input type="number" id="price-input" placeholder="Harga barang...">
+<button onclick="addProduct()">Tambah ke keranjang</button>
+
+<!-- Total harga -->
+<p>Total Harga: <span id="total-price">Rp0</span></p>
+
+<!-- Form untuk mengaktifkan promo member -->
+<label for="member-checkbox">Member?</label>
+<input type="checkbox" id="member-checkbox" onchange="calculateTotal()">
+<p id="discount-info" style="display: none;">Anda mendapatkan diskon 10%!</p>
+
+<script>
+    // Array data barang yang dijual
+    const products = [
+        { name: "Samsung Galaxy S21", price: 15000000 },
+        { name: "iPhone 13 Pro", price: 18000000 },
+        { name: "Xiaomi Mi 11 Ultra", price: 12000000 },
+        { name: "Google Pixel 6 Pro", price: 14000000 },
+        { name: "OnePlus 9 Pro", price: 13000000 }
+    ];
+
+    // Variable untuk menyimpan total harga
+    let totalPrice = 0;
+
+    // Function untuk menampilkan daftar barang
+    function displayProductList() {
+        const productList = document.getElementById("product-list");
+        productList.innerHTML = ""; // Clear list
+        products.forEach(product => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${product.name} - Rp${product.price.toLocaleString()}`;
+            productList.appendChild(listItem);
+        });
+    }
+
+    // Function untuk menambah barang ke keranjang
+    function addProduct() {
+        const productName = document.getElementById("product-input").value;
+        const productPrice = parseFloat(document.getElementById("price-input").value);
+        if (productName && !isNaN(productPrice) && productPrice > 0) {
+            totalPrice += productPrice;
+            document.getElementById("total-price").textContent = "Rp" + totalPrice.toLocaleString();
+            document.getElementById("product-input").value = ""; // Kosongkan input nama barang
+            document.getElementById("price-input").value = ""; // Kosongkan input harga barang
+            calculateTotal(); // Hitung ulang total harga dengan memperhitungkan promo member
+        } else {
+            alert("Mohon masukkan nama dan harga barang yang valid.");
+        }
+    }
+
+    // Function untuk menghitung total harga dengan memperhitungkan promo member
+    function calculateTotal() {
+        const isMember = document.getElementById("member-checkbox").checked;
+        if (isMember) {
+            const discountedPrice = totalPrice * 0.9; // Diskon 10% untuk member
+            document.getElementById("total-price").textContent = "Rp" + discountedPrice.toLocaleString();
+            document.getElementById("discount-info").style.display = "block";
+        } else {
+            document.getElementById("total-price").textContent = "Rp" + totalPrice.toLocaleString();
+            document.getElementById("discount-info").style.display = "none";
+        }
+    }
+
+    // Panggil function untuk menampilkan daftar barang saat halaman dimuat
+    displayProductList();
+</script>
+</body>
+</html>
