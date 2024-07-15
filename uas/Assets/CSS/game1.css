@@ -1,0 +1,161 @@
+html {
+	height: 100%;
+	background: radial-gradient(circle, #fff, #ccc);
+	background: -webkit-radial-gradient(circle, #fff, #ccc);
+	background: -o-radial-gradient(circle, #fff, #ccc);
+	background: -moz-radial-gradient(circle, #fff, #ccc);
+	font-size: 18px;
+	/* Increased base font size */
+}
+
+#container {
+	height: 600px;
+	width: 800px;
+	background-color: #9DD2EA;
+	margin: 50px auto;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 0px 0px #009de4;
+	position: relative;
+}
+
+#score {
+	background-color: #f1ff92;
+	color: #888e5f;
+	padding: 15px;
+	/* Increased padding */
+	position: absolute;
+	left: 20px;
+	/* Adjusted to the left */
+	top: 20px;
+	box-shadow: 0px 4px 0px 0px #9da853;
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+#level {
+	background-color: #f1ff92;
+	color: #888e5f;
+	padding: 15px;
+	/* Increased padding */
+	position: absolute;
+	right: 20px;
+	/* Adjusted to the right */
+	top: 20px;
+	box-shadow: 0px 4px 0px 0px #9da853;
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+#correct,
+#wrong {
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	background-color: #42e252;
+	color: #fff;
+	padding: 15px;
+	/* Increased padding */
+	font-size: 1.5em;
+	/* Increased font size */
+	display: none;
+}
+
+#wrong {
+	background-color: #de401a;
+}
+
+#question {
+	width: 700px;
+	height: 300px;
+	margin: 20px auto 10px auto;
+	background-color: #9da0ea;
+	text-align: center;
+	box-shadow: 0px 4px 0px 0px #535aa8;
+}
+
+#questionImg {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+#instruction {
+	width: 700px;
+	height: 50px;
+	background-color: #b481d9;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 45px;
+	box-shadow: 0px 4px 0px 0px #8153a8;
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+#choices {
+	width: 700px;
+	height: 120px;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.box {
+	width: 150px;
+	height: 100px;
+	background-color: #fff;
+	display: inline-block;
+	margin: 0 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 100px;
+	position: relative;
+	transition: all 0.2s;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+.button {
+	width: 150px;
+	/* Increased width */
+	text-align: center;
+	cursor: pointer;
+	padding: 15px;
+	/* Increased padding */
+	background-color: #6fb3e0;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 20px;
+	left: calc(50% - 75px);
+	/* Adjusted for new width */
+	color: white;
+	box-shadow: 0px 4px 0;
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+#gameOver {
+	display: none;
+	text-align: center;
+}
+
+#gameOver h1 {
+	font-size: 2em;
+	/* Increased font size */
+}
+
+#gameOver p {
+	font-size: 1.5em;
+	/* Increased font size */
+}
+
+#restart {
+	padding: 10px 20px;
+	font-size: 1.2em;
+	/* Increased font size */
+	background-color: #6fb3e0;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}

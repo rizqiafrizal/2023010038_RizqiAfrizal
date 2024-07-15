@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Math Games</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+	<link rel="stylesheet" href="Assets/CSS/game1.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="score">Score: <span id="scorevalue">0</span></div>
+		<div id="correct">Benar🤩</div>
+		<div id="wrong">Salah😢</div>
+		<div id="question"><img id="questionImg" src="" alt="Question Image"></div>
+		<div id="instruction">Click on the correct answer</div>
+		<div id="choices">
+			<div id="box1" class="box" onclick="checkAnswer(1)"></div>
+			<div id="box2" class="box" onclick="checkAnswer(2)"></div>
+			<div id="box3" class="box" onclick="checkAnswer(3)"></div>
+			<div id="box4" class="box" onclick="checkAnswer(4)"></div>
+		</div>
+		<div id="startreset" class="button" onclick="startResetGame()">Start Game</div>
+		<div id="level">Level: <span id="levelvalue">1</span></div>
+		<div id="gameOver">
+			<h1>Game Over</h1>
+			<p>Your final score is: <span id="finalscore">0</span></p>
+			<button id="restart" onclick="restartGame()">Play Again</button>
+		</div>
+	</div>
+	<script src="Assets/JS/game.js"></script>
+</body>
+
+</html>

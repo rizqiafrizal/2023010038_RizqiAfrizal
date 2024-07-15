@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(325deg, #00c6ff 0%, #0072ff 100%);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .profile-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            color: #333;
+            border: 3px solid #0072ff;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #0072ff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 28px;
+            font-weight: 700;
+            color: #0072ff;
+            /* Biru tua */
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 18px;
+            color: #333;
+            /* Warna teks utama */
+            margin-bottom: 15px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+            /* Warna teks utama */
+            line-height: 1.6;
+        }
+
+        .info-list li span {
+            font-weight: bold;
+            color: #0072ff;
+            /* Biru tua */
+            display: inline-block;
+            width: 100px;
+        }
+
+        .info-list li::before {
+            content: '•';
+            color: #0072ff;
+            /* Biru tua */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <img src="Assets/img/Profile.jpg" alt="Foto Profil" class="profile-picture">
+        <h1>Hai Teman-teman</h1>
+        <p>Kenalan Yuk!</p>
+        <ul class="info-list">
+            <li><span>Nama:</span> RIZQI AFRIZAL</li>
+            <li><span>Tanggal Lahir:</span> 2 Juli 2005</li>
+            <li><span>Alamat:</span> Datar 3/2 Mayong Jepara</li>
+            <li><span>Status:</span> Mahasiswa Politeknik Balekambang</li>
+            <li><span>Sekolah:</span> Politeknik Balekambang</li>
+            <li><span>Hobi:</span> Bongkar Pasang Mesin</li>
+            <li><span>Email:</span> rizkyafriza5656@gmail.com</li>
+            <li><span>Telepon:</span> 0878 1609 4889</li>
+        </ul>
+    </div>
+</body>
+
+</html>
