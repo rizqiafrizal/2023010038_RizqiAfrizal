@@ -9,8 +9,17 @@
 </head>
 
 <body>
-	<div id="container">
-		<div id="score">Score: <span id="scorevalue">0</span></div>
+	<div id="nameInputContainer">
+		<img id="introImg" src="Assets/Img/introImage.png" alt="Intro Image">
+		<input type="text" id="playerName" placeholder="Enter your name">
+		<button id="submitName" onclick="submitName()">Start</button>
+	</div>
+	<div id="container" style="display: none;">
+		<div id="infoBar">
+			<div id="score">Score: <span id="scorevalue">0</span></div>
+			<div id="playerDisplay">Player: <span id="playerNameDisplay"></span></div>
+			<div id="level">Level: <span id="levelvalue">1</span></div>
+		</div>
 		<div id="correct">Benar🤩</div>
 		<div id="wrong">Salah😢</div>
 		<div id="question"><img id="questionImg" src="" alt="Question Image"></div>
@@ -22,7 +31,6 @@
 			<div id="box4" class="box" onclick="checkAnswer(4)"></div>
 		</div>
 		<div id="startreset" class="button" onclick="startResetGame()">Start Game</div>
-		<div id="level">Level: <span id="levelvalue">1</span></div>
 		<div id="gameOver">
 			<h1>Game Over</h1>
 			<p>Your final score is: <span id="finalscore">0</span></p>

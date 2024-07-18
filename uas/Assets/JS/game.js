@@ -2,6 +2,7 @@ var playing = false;
 var score;
 var level;
 var correctAnswer;
+var playerName;
 
 var questions = [
     // Pertanyaan Level 1
@@ -26,7 +27,16 @@ var questions = [
     ]
 ];
 
-document.getElementById("startreset").innerHTML = "Start Game";
+function submitName() {
+    playerName = document.getElementById("playerName").value;
+    if (playerName.trim() !== "") {
+        document.getElementById("playerNameDisplay").innerHTML = playerName;
+        document.getElementById("nameInputContainer").style.display = "none";
+        document.getElementById("container").style.display = "block";
+    } else {
+        alert("Please enter your name");
+    }
+}
 
 function startResetGame() {
     if (playing) {

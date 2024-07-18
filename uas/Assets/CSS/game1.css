@@ -8,6 +8,60 @@ html {
 	/* Increased base font size */
 }
 
+body {
+	background: linear-gradient(to bottom, #b3cde0, #011f4b);
+	height: 100%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#nameInputContainer {
+	width: 400px;
+	margin: 100px auto;
+	text-align: center;
+	padding: 20px;
+	background: linear-gradient(135deg, #1e3c72, #2a5298);
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	color: white;
+}
+
+#nameInputContainer img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#nameInputContainer input {
+	padding: 10px;
+	font-size: 1.2em;
+	width: calc(100% - 22px);
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 5px;
+	background: white;
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#nameInputContainer button {
+	padding: 10px 20px;
+	font-size: 1.2em;
+	background-color: #6fb3e0;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#nameInputContainer button:hover {
+	background-color: #5a9bd3;
+}
+
 #container {
 	height: 600px;
 	width: 800px;
@@ -15,43 +69,36 @@ html {
 	margin: 50px auto;
 	padding: 20px;
 	border-radius: 10px;
-	box-shadow: 0px 4px 0px 0px #009de4;
+	box-shadow: 0 4px 0 0 #009de4;
 	position: relative;
 }
 
-#score {
-	background-color: #f1ff92;
-	color: #888e5f;
-	padding: 15px;
-	/* Increased padding */
-	position: absolute;
-	left: 20px;
-	/* Adjusted to the left */
-	top: 20px;
-	box-shadow: 0px 4px 0px 0px #9da853;
-	font-size: 1.5em;
-	/* Increased font size */
+#infoBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+	margin-bottom: 20px;
 }
 
-#level {
+#score,
+#level,
+#playerDisplay {
 	background-color: #f1ff92;
 	color: #888e5f;
 	padding: 15px;
 	/* Increased padding */
-	position: absolute;
-	right: 20px;
-	/* Adjusted to the right */
-	top: 20px;
-	box-shadow: 0px 4px 0px 0px #9da853;
+	box-shadow: 0 4px 0 0 #9da853;
 	font-size: 1.5em;
 	/* Increased font size */
+	border-radius: 10px;
 }
 
 #correct,
 #wrong {
 	position: absolute;
 	right: 20px;
-	top: 60px;
+	top: 140px;
 	background-color: #42e252;
 	color: #fff;
 	padding: 15px;
@@ -71,7 +118,7 @@ html {
 	margin: 20px auto 10px auto;
 	background-color: #9da0ea;
 	text-align: center;
-	box-shadow: 0px 4px 0px 0px #535aa8;
+	box-shadow: 0 4px 0 0 #535aa8;
 }
 
 #questionImg {
@@ -86,7 +133,7 @@ html {
 	margin: 10px auto;
 	text-align: center;
 	line-height: 45px;
-	box-shadow: 0px 4px 0px 0px #8153a8;
+	box-shadow: 0 4px 0 0 #8153a8;
 	font-size: 1.5em;
 	/* Increased font size */
 }
@@ -110,7 +157,7 @@ html {
 	line-height: 100px;
 	position: relative;
 	transition: all 0.2s;
-	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px rgba(0, 0, 0, 0.2);
 	font-size: 1.5em;
 	/* Increased font size */
 }
@@ -125,13 +172,14 @@ html {
 	background-color: #6fb3e0;
 	border-radius: 5px;
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	left: calc(50% - 75px);
 	/* Adjusted for new width */
 	color: white;
-	box-shadow: 0px 4px 0;
+	box-shadow: 0 4px 0;
 	font-size: 1.5em;
 	/* Increased font size */
+	margin-top: 20px;
 }
 
 #gameOver {
